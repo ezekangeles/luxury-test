@@ -1,0 +1,1027 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;500;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+    
+}
+
+:root{
+    --text:#1a1a1a;
+    --hover:rgba(0,0,0,.5);
+}
+
+html{
+    font-family: "Karla", sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* body{
+    position: relative;
+} */
+
+img{
+    width: 15em;
+}
+
+.hero{
+    width: 100%;
+    height: 40rem;
+    background-image: url("https://images.unsplash.com/photo-1565182999561-18d7dc61c393?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjQxNDUyfQ&w=1920");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+}
+
+h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: #ddd4d4;
+    font-weight: 400;
+}
+
+.sticky-nav{
+    background-color: rgba(0,0,0,.5);
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    top: 0;
+    position: sticky;
+    z-index: 1;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    z-index: 1;
+
+}
+
+nav ul{
+    display: flex;
+    column-gap: 1.2rem;
+    justify-items: center;
+    align-items: center;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+    position: relative;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul li a::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    bottom: -5px;
+    transition: .3s ease-in-out;
+}
+
+nav ul li a:hover::before{
+    cursor: pointer;
+    width: 100%;
+}
+
+.fa-bars{
+    display: none !important;
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.container{
+    width: 100%;
+}
+
+.appointment{
+    position: relative;
+    background-color: rgb(82, 82, 82);
+    position: sticky;
+    top: 0;
+    height: 5rem;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    z-index: 5;
+}
+
+.appointment-sticky{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+    color: white;
+    
+}
+
+.search-container, .book-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: .5em;
+    position: relative;
+    
+}
+
+
+.appointment-text{
+    outline: none;
+    border: none;
+    width: 30em;
+    padding: .5rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: rgba(0,0,0,.8);
+}
+
+.fa-magnifying-glass{
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    transform: translateY(-50%);
+    color: rgba(0,0,0,.5);
+}
+
+.book-container:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.plan{
+    padding: 2rem 0;
+    color: var(--text);
+}
+
+h1{
+    text-align: center;
+    font-size: 2.5em;
+    font-family: "Kaisei Decol", serif;
+    color: var(--text);
+}
+
+.four{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: .5rem;
+    margin: 2rem 0;
+}
+
+.marketing-plan{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    transition: all .2s ease-in-out;
+}
+
+.marketing-plan:hover{
+    background-color: rgba(214, 214, 214,.5);
+}
+
+.marketing-plan i{
+    font-size: 7em;
+    margin: .5em 0;
+    color: #b1ac2a;
+}
+
+.marketing-plan .header{
+    font-size: 2em;
+    margin-bottom: 1em;
+    font-family: "Kaisei Decol", serif;
+    text-align: center;
+}
+
+.marketing-plan .description{
+    padding: 0 1em;
+    margin-bottom: 1em;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.eight{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .5rem;
+    margin: 5rem 0 2rem 0;
+    overflow: hidden;
+}
+
+.eight-grid{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 50vh;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.eight-grid:hover{
+    transform: scale(1.02);
+    transition: all .2s ease-in-out;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.eight-grid img{
+    width: 100%;
+    padding: 0;  
+}
+
+.white{
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+}
+
+.white li{
+    font-size: 1.3em;
+    padding: .5em 0; 
+}
+
+.white p{
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    font-family: "Kaisei Decol", serif;
+}
+
+.eight-grid-flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.black{
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+    font-size: 2em;
+    font-family: "Kaisei Decol", serif;
+}
+
+.person, .bookshelf, .clock, .vase{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.person{
+    background-image: url("https://res.cloudinary.com/luxuryp/images/w_1280,c_limit,f_auto,q_auto/ghtq7jtce7tsgdjtosrs/image-025");
+}
+
+.bookshelf{
+    background-image: url("https://res.cloudinary.com/luxuryp/images/w_1280,c_limit,f_auto,q_auto/axx0whb7xfmlwhvcckrr/image-023");
+}
+
+.clock{
+    background-image: url("https://res.cloudinary.com/luxuryp/images/w_1280,c_limit,f_auto,q_auto/tvntwvzwsjyi3ndwtpux/image-022");
+}
+
+.vase{
+    background-image: url("https://res.cloudinary.com/luxuryp/images/w_1280,c_limit,f_auto,q_auto/lpaq7euqjebackcuwsdu/image-024");
+}
+
+.process, .buying{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    height: 50em;
+    margin: 2.5em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    color: #fff;
+    position: relative;
+}
+
+.process{
+    background-image: url("https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/gihsg13plfsb8xfbzmlf/image-027");
+}
+
+.process h3, .buying h3{
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 2em;
+    font-family: "Kaisei Decol", serif;
+}
+
+.selling-process {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.selling-process p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: 400;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.selling-process p span{
+    font-size: 2em;
+}
+
+.buying{
+    background-image: url("https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/nhcjbdzbycjvfcks0nqe/image-004");
+}
+
+.plan{
+    margin: 2em 0;
+}
+
+.exp{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1em;
+    margin: 2em 0;
+}
+
+.exp-pic-1{
+    background-image: url("https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/azjfmtzx6evxpubynfci/edit-page-11r2");
+}
+
+.exp-pic-2{
+    background-image: url("https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/m5ea1kpipv5tiflnfx8t/edited-p-12");
+}
+.exp-pic-3{
+    background-image: url("https://res.cloudinary.com/luxuryp/images/w_1280,c_limit,f_auto,q_auto/fuammgjubhjfvgcqleef/edit-image-056");
+}
+.exp-pic-1,.exp-pic-2,.exp-pic-3{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    height: 70vh;
+    width: 100%;
+}
+
+.exp-sentence{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+.exp-sentence h3{
+    font-family: "Kaisei Decol", serif;
+    font-size: 2em;
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+.exp-sentence p{
+    font-size: 1.1em;
+    line-height: 1.5em;
+}
+
+.exp-sentence ul li{
+    list-style: disc;
+}
+
+.market{
+    margin: 2em 0;
+}
+
+.marketh4{
+    text-align: center;
+    font-size: 1.8em;
+    font-family: "Kaisei Decol", serif;
+    font-weight: 300;
+    margin: 1em 0 .5em 0;
+}
+
+.market-description{
+    text-align: center;
+}
+
+.bold{
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.exposure{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    align-items: start;
+    margin: 1em;
+    gap: 1em;
+    background-color: #f5f5f5;
+    padding: 1.5em;
+    border-radius: 10px;
+}
+
+.zillow-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.zillow{
+    width: 350px;
+}
+
+.partners{
+    margin: 2em 0;
+}
+
+.partners-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1em;
+    margin: 1em 0;
+}
+
+.partners-flex p{
+    font-size: 1.1em;
+    line-height: 1.5em;
+}
+
+.logos-container{
+    width: 50%;
+}
+
+.luxury-img{
+    width: 50%;
+}
+
+.luxury-img img{
+    width: 100%;
+}
+
+.logos{
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    padding: 1em 0;
+}
+
+.logos img{
+    width: 30%;
+}
+
+.logos-container p{
+    padding: 1em 0;
+}
+
+.map{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    margin: 2em 0;
+}
+
+.map-four{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: .5em;
+    width: 50%;
+}
+
+.imap{
+    width: 50%;
+}
+
+.imap img{
+    width: 100%;
+}
+
+.work-hero{
+    background-image: url("https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/skkve0aqzhkkyiytn92d/work-with-us");
+    width: 100%;
+    height: 40rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.work{
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width:700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.work h3{
+    font-family: "Kaisei Decol", serif;
+    font-size: 3em;
+    margin-bottom: 1em;
+}
+
+.work p{
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin-bottom: 3em;
+}
+
+.work button{
+    padding: 1em 2em;
+    font-size: 1.2em;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-weight: 400;
+    transition: all .2s ease-in-out;
+}
+
+.work button:hover{
+    cursor: pointer;
+    color: #f5f5f5;
+    background-color: #1a1a1a;
+}
+
+.news{
+    margin: 3em 0 2em 0;
+}
+
+.letter{
+    display: flex;
+    width: 100%;
+    gap: 1em;
+}
+
+.partnership{
+    width: 50%;
+}
+
+.letter h3{
+    font-size: 1.7em;
+    font-weight: 300;
+    font-family: "Kaisei Decol", serif;
+    margin-bottom: 1em;
+}
+
+.subtitle{
+    font-size: 1.1em;
+    margin-bottom: 2em;
+}
+
+.address-contact{
+    display: flex;
+    gap: 1em;
+}
+
+.info{
+    font-weight: bold;
+    margin-bottom: 1.5em;
+}
+
+.newletter{
+    width: 50%;
+}
+
+.footer-email{
+    border: none;
+    border-bottom: 1px solid black;
+    width: 100%;
+    font-size: 1.2em;
+    padding: .5em;
+    outline: none;
+    margin-bottom: 1em;
+}
+
+.consent{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: center;
+    align-items: start;
+    gap: .5em;
+    margin-bottom: 1em;
+}
+
+.consent p{
+    font-size: .7em;
+}
+
+.consent p span{
+    text-decoration: underline;
+    color: blue;
+}
+
+.consent p span:hover{
+    cursor: pointer;
+}
+
+.newletter button{
+    padding: 1em 1.5em;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    border-radius: 3px;
+    transition: all .2s ease-in-out;
+}
+
+.newletter button:hover{
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+}
+
+footer{
+    background:#EAEAEA;
+    color: #262626;
+    padding: 2.5em 0;
+}
+
+.socials{
+    display: flex;
+    gap: 2em;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.socials img{
+    width: 2em;
+}
+
+.socials .fa-brands{
+    font-size: 2em;
+    transition: all .2s ease-in-out;
+    overflow: hidden;
+}
+
+.socials .fa-brands:hover{
+    cursor: pointer;
+    color: #1a1a1a;
+    transform: scale(1.2);
+}
+
+footer p{
+    text-align: center;
+   
+}
+
+.arrow-up{
+    position: fixed;
+    bottom: 3em;
+    right: 2em;
+    background-color: #646464;
+    padding: 1em;
+    border-radius: 3px;
+    color: #ddd4d4;
+    font-size: 1em;
+    transition: all .2s ease-in-out;
+}
+
+.arrow-up:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: #262626;
+}
+
+.message-container{
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s ease-in-out;
+    background-color: rgba(0,0,0,.8);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.message-container-show{
+    visibility: visible;
+    z-index: 999;
+    opacity: 1;
+}
+
+.fa-rectangle-xmark{
+    position: absolute;
+    top: .5em;
+    right: .5em;
+    font-size: 1.8em;
+    color: rgba(0,0,0,.9);
+}
+
+.fa-rectangle-xmark:hover{
+    cursor: pointer;
+}
+
+.message{
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    max-height: 700px;
+}
+
+.contact-info{
+    width: 50%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.message form{
+    width: 50%;
+    color: black;
+    background-color: white;
+}
+
+.fa-square-phone,.fa-location-dot{
+    font-size: 2em;
+    margin: .8em 0;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+form h4{
+    font-family: "Kaisei Decol", serif;
+    padding: 1em 0;
+    text-align: center;
+    font-size: 2em;
+}
+
+form input{
+    width: 80%;
+    border: none;
+    outline: none;
+    padding: .5em 1em;
+    font-size: .8em;
+    border-bottom: 1px solid #646464;
+    margin-bottom: 1.5em;
+}
+
+.agree{
+    display: flex;
+    width: 80%;
+    gap: .1em;
+    align-items: start;
+    margin: 1em 0;
+}
+
+.agree p{
+    font-size: .7em;
+}
+
+.agree p span{
+    text-decoration: underline;
+    color: blue;
+}
+
+#submit{
+    width: 50%;
+    padding: 1em ;
+    font-size: 1em;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    transition: all .2s ease-in-out;
+    overflow: hidden;
+    border: 1px solid black;
+   
+}
+#submit:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+   }
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+
+@media (max-width:1550px) {
+    .wrapper{
+        padding:0 1rem;
+    }
+
+    nav ul{
+        column-gap: .7rem;
+    }
+
+   
+}
+
+@media (max-width:1420px){
+    nav ul{
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(0,0,0,.5);
+        position: absolute;
+        top:5rem;
+        overflow: hidden;
+        left: 0;
+        right: 0;
+        transition: all .5s ease-in-out;
+        gap: 0;
+        height: 100vh;
+    }
+
+    nav ul li{
+        padding-bottom: 1rem;
+        padding: 1rem 0;
+    }
+
+    nav ul li a{
+        font-size: 1.5rem;
+        font-weight: normal;
+    }
+
+    .fa-bars{
+        display: block !important;
+        font-size: 2rem;
+        color: #fff;
+    }
+
+    .fa-bars:hover{
+        cursor: pointer;
+        font-size: 2.3rem;
+        transition: all .1s ease-in-out;
+    }
+
+    .four{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: .5rem;
+        margin: 2rem 0;
+    }
+}
+
+@media (max-width:1100px){
+    .exp{
+        grid-template-columns: repeat(1,1fr);
+    }
+ 
+    .partners-flex{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .logos-container{
+        width: 100%;
+    }
+    
+    .luxury-img{
+        width: 100%;
+    }
+
+    .map{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .map-four{
+        width: 100%;
+    }
+    
+    .imap{
+        width: 100%;
+    }
+}
+
+@media (max-width:900px){
+    .eight{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: .5rem;
+        margin: 5rem 0 2rem 0;
+    }
+
+    .letter{
+        flex-direction: column;
+    }
+
+    .partnership{
+        width: 100%;
+    }
+    .newletter{
+        width: 100%;
+        margin-top: 2em;
+    }
+
+}
+
+@media (max-width:730px){
+    .appointment-sticky{
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-around;
+    }
+
+    .four{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: .5rem;
+        margin: 2rem 0;
+    }
+
+    .map-four{
+        grid-template-columns: repeat(1,1fr);
+   }
+   .message{
+    flex-direction: column;
+    }
+    
+    .contact-info, .message form{
+        width: 100%;
+    }
+
+    .lastp{
+        padding-bottom: 1em;
+    }
+
+    form h4{
+        padding: .5em;
+        font-size: 1.2em;
+    }
+
+    .fa-square-phone,.fa-location-dot{
+        font-size: 1.5em;
+        margin: .2em 0;
+    }
+
+    .agree{  
+        margin: .5em 0;
+    }
+}
